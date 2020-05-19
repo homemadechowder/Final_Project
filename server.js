@@ -15,7 +15,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 36000000 } }));
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+app.use('/', express.static(path.join(__dirname+"/public")));
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
