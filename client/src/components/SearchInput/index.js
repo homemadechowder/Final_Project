@@ -9,7 +9,7 @@ class SearchInput extends Component {
     this.state = {
         movies: [],
         movieDetail: [],
-    };
+    };  
   }
   keyPressed(event,myThis) {
 
@@ -129,9 +129,6 @@ closeTrailer = (myThis) => {
         }
       }
     }
-
-    
-    
 
     return (
       <>
