@@ -1,6 +1,7 @@
 # Project-03
 
-Heroku link: 
+### Heroku link: https://askk-movies.herokuapp.com/
+#### Test username/password: askk@askk.com  and password: Askk!123
 
 This application is a movie and TV show compendium. It showcases latest trending movies and TV shows. It provides personalized experience by allowing users to create an account and access it with their login credentials. It lets them search for movies or TV shows and save their personal comments and ratings to these movies/TV shows. Users can also share their content with friends and family in social media.
 
@@ -12,14 +13,17 @@ This application is a movie and TV show compendium. It showcases latest trending
 5. [User Story Breakdown](#user)
 6. [Task Breakdowns](#task)
 7. [UI Design](#UI)
-8. [How We Implemented Bootstrap](#bootstrap)
-9. [Mobile Responsiveness](#mobile)
-10. [API Design, Firebase, Libraries](#design)
-11. [Git Commands](#git)
-12. [DEMO Gif Walkthrough](#gifs)
-13. [Future RoadMap](#future)
-14. [Team memeber GIT Links](#team)
-15. [Code Snippets](#code)
+8. [How We Implemented React Carousel Component](#reactcarousel)
+9. [How We Implemented React Sharing Component](#reactsharing)
+10. [How We Implemented React Bucketing Component](#reactbucket)
+11. [How We Implemented z Index](#zIndex)
+12. [Mobile Responsiveness](#mobile)
+13. [API Design, Firebase, Libraries](#design)
+14. [Git Commands](#git)
+15. [DEMO Gif Walkthrough](#gifs)
+16. [Future RoadMap](#future)
+17. [Team memeber GIT Links](#team)
+18. [Code Snippets](#code)
 
 <a name="howitworks"></a>
 ## 1. How the APP works
@@ -31,11 +35,12 @@ The landing page of the application showcases carousels for latest trending movi
 HTML
 Javascript/jQuery
 MongoDB
-APIs
-Javascript 
+APIs 
 Bootstrap
 AJAX
 JSON
+React
+Heroku
 
 <a name="app"></a>
 ## Applications Used
@@ -43,13 +48,96 @@ GitHub
 ChromeDev tools
 Visual Studio Code
 Chrome browser
+Heroku - Deployment
+
+<a name="wire"></a>
+## Wireframe Design
+
+![WireFrame Design](https://github.com/homemadechowder/Final_Project/blob/master/client/public/Images/wireframe-1.png "WireFrame Design 1")
+![WireFrame Design](https://github.com/homemadechowder/Final_Project/blob/master/client/public/Images/wireframe-2.png "WireFrame Design 2")
+
+<a name="user"></a>
+## User Story Breakdown
+User Story 1: Create a website with necessary hooks for building the backend functionality
+
+User Story 2: Add Bootstrap for mobile responsivness
+
+User Story 3: Add OMDI API functionality
+
+User Story 4: Add Trending functionality
+
+User Story 5: Sign in and register with Google Sign-in
+
+User Story 6: Scrape from Rotten Tomatoes
+
+User Story 7: Add Social platform sharing 
+
+User Story 7: Bucket functionality for saving movies/Tv shows
+
+User Story 8: REACT front end
+
+User Story 9: API Routes
+
+User Story 10: REACT Bucket pages 
+
+<a name="task"></a>
+## Task Breakdowns
+Krishna (Sharing via social media/ Movie Search)
+Andrew (UI Design/Front-end/Javascript & Server set up/Routing)
+Sree (Back-end /Front-end/ Authentication)
+Katia (Front-end/UI Design/Mobile Responsiveness )
+
+<a name="UI"></a>
+## UI Design
+
+![UI Design Progression](https://github.com/homemadechowder/Final_Project/blob/master/client/public/Images/UI%20Layout.gif "UI Design Layout 1")
+
+
+## How We Implemented Carousel Component
+
+An npm package that lets you set up a reasonably comprehensive carousel that can contain multiple items
+
+![REACT Carousel](https://github.com/homemadechowder/Final_Project/blob/master/client/public/Images/react-carousel.png "React Carousel")
+
+## How We Implemented React Sharing Component
+
+An npm package that lets you share across social media platform
+
+![REACT Sharing](https://github.com/homemadechowder/Final_Project/blob/master/client/public/Images/Sharing.gif "React Sharing")
+
+## How We Implemented React Bucketing Component
+
+Then “save” selected  movies and TV shows are bucketed into different categories
+
+![REACT Bucket](https://github.com/homemadechowder/Final_Project/blob/master/client/public/Images/Bucket.gif "React Bucket")
+
+## How We Implemented Z-index
+
+z-index comes into play only when the divs are in the same position
+
+Relative, Absolute, Fixed, Sticky(absolute/fixed)
+
+Double check the css property using inspect to see which position it is in or it inherited to prevent confusion. 
+
+Example showing z-index in work
+
+![Z Index Overlay](https://github.com/homemadechowder/Final_Project/blob/master/client/public/Images/z-index-image.png "Z index Overlay")
+
+
+## Mobile Responsiveness
+Accomplished with @media and vw, a scaling unit for mobile, tablet and desktop viewing
+
+![Mobile Responsiveness - 1](https://github.com/homemadechowder/Final_Project/blob/master/client/public/Images/Animated%20GIF-downsized.gif "Mobile Responsiveness - 1")
+
+![Mobile Responsiveness - 2](https://github.com/homemadechowder/Final_Project/blob/master/client/public/Images/Animated%20GIF-downsized_large%202.53.52%20PM.gif "Mobile Responsiveness - 2")
 
 <a name="task"></a>
 ## Task Breakdowns
 1. Andrew - A sleek looking UI using bootstrap and  the website being fully mobile responsive
-2. Katia - 
-3. Krishna - 
+2. Katia - Mobile responsive, Wireframe design
+3. Krishna - Social media sharing, Imporved search results which gets the results based on the search keys enetered by the user.
 4. Sree - OAuth sign-in, Registration page logic, modelling, search page (inital design, backend routes and fetching data and rendering component in the browser), saved page (initial design, backend routes to store data and React.js code to fetch and render component)
+
 
 <a name="design"></a>
 ## API Design, Libraries
@@ -70,7 +158,7 @@ We scraped youtube search pages to get trailers for movies queried by users.
 ## Authors - Team members, GIT links
 <!-- make a link to the deployed site and have your name as the link -->
 * [Andrew](https://github.com/homemadechowder)
-* [Katia](https://github.com/katia)
+* [Katia](https://github.com/katrinity)
 * [Krishna](https://github.com/krishnaaddala)
 * [Sree](https://github.com/sreeveena/)
 
