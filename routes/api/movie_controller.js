@@ -86,6 +86,7 @@ router.get("/api/trending-movies", function(req, res) {
 function getTrendingMovies(req,res1) {
     var trendingMovies = [];
     var movieCount = {total: 10};
+    
     //Get movie list from rottentomatoes
     axios({method: "get", url: "https://www.rottentomatoes.com/browse/in-theaters/"}).then( function(res,status) {
         res = res.data;
@@ -100,11 +101,12 @@ function getTrendingMovies(req,res1) {
         //Go after top 5 movies
         for(var i = 0, j = 0; i < movieData.length; i++) {
             var movie = movieData[i];
-            if (Object.keys(movie).includes("mainTrailer")) {
-                if(Object.keys(movie.mainTrailer).includes("sourceId")) {
+            console.log(movieData);
+            if (Object.keys(movie).includes("title")) {
                     j++;
                     getMovieImage(req,res1,trendingMovies, movie, movieCount);
-                }
+                    console.log("check");
+                
             } else {
                 movieCount.total--;
             }

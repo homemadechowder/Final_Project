@@ -21,8 +21,7 @@ class BannerCard extends Component{
     }
 
     getLink = () => {
-        this.setState({link: this.props.movie.mainTrailer.sourceId});
-        
+        // this.setState({link: this.props.movie.mainTrailer.sourceId});  
     }
 
     enableControls = (id, index) => {

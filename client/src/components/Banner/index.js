@@ -20,12 +20,11 @@ class Banner extends Component{
   componentDidMount() {
     var compThis = this;
     console.log("fetching trending movies");
-        $.ajax({METHOD: "GET", url: "/api/trending-movies"}).done(function (res, status) {    
-            console.log("Fetched trending movies" + res);
-            console.log(res);
-            compThis.getTrendingTV(compThis, res.result);         
+        $.ajax({METHOD: "GET", url: "/api/trending-movies"}).then(function (res, status) {    
+            console.log("Fetched trending movies" + res); 
+            compThis.getTrendingTV(compThis, res.result);       
         }); 
-       
+    this.printResults();
   }
 
   printResults(){
@@ -34,8 +33,9 @@ class Banner extends Component{
   }
 
   getTrendingTV = (compThis, movies) => {
-    $.ajax({METHOD: "GET", url: "/api/trending-tv"}).done(function (res, status) {       
+    $.ajax({METHOD: "GET", url: "/api/trending-tv"}).then(function (res, status) {       
         compThis.setState({trendingMovies: movies, trendingTV: res.result});      
+        this.printResults();
     });
   }
 
